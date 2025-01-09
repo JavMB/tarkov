@@ -8,7 +8,6 @@ body {
 }
 
 #titulo-principal {
-    /*Esto me ayudado con gpt para hacer un titulo bonito */
     font-family: 'Staatliches', sans-serif;
     font-size: 3em;
     color: #fff;
@@ -20,7 +19,6 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
     max-width: 800px;
     margin: 20px auto;
-    /* Centrado horizontal */
 }
 
 .subtitulo,
@@ -29,9 +27,7 @@ body {
 #curiosidades {
     max-width: 800px;
     margin: 0 auto;
-    /* Centra horizontalmente */
     padding: 10px;
-    /* Espaciado interno */
 }
 
 .video {
@@ -40,21 +36,16 @@ body {
     align-items: center;
     margin: 20px auto;
     max-width: 800px;
-
 }
 
 a {
     color: #00ccff;
-    /* Cambia a un color que combine mejor, como azul claro */
     text-decoration: none;
-    /* Elimina el subrayado si no lo deseas */
 }
 
 a:hover {
     color: #ffcc00;
-    /* Cambia de color al pasar el ratón */
     text-decoration: underline;
-    /* O agrega un subrayado en hover si lo prefieres */
 }
 
 #boton {
@@ -65,29 +56,14 @@ a:hover {
     max-width: 800px;
 }
 
-#mapa {
+#mapa, #pvp {
     display: block;
-    /* Cambiamos de flex a block para evitar problemas */
     margin: 20px auto;
-    /* Centra la imagen */
     max-width: 100%;
-    /* La imagen se adapta al tamaño del contenedor */
     height: auto;
-    /* Mantiene la proporción de la imagen */
 }
 
-#pvp {
-    display: block;
-    /* Cambiamos de flex a block para evitar problemas */
-    margin: 20px auto;
-    /* Centra la imagen */
-    max-width: 100%;
-    /* La imagen se adapta al tamaño del contenedor */
-    height: auto;
-    /* Mantiene la proporción de la imagen */
-}
-
-/* ESTO DEL MODAL LO HECHO CON GPT PARA PROBAR COMO ES PARA IMAGENES*/
+/* Modales hechos con ayuda de gpt */
 .modal {
     position: fixed;
     top: 0;
@@ -101,25 +77,37 @@ a:hover {
     z-index: 1000;
 }
 
-/* Mostrar el modal al hacer clic en el anclaje */
+/* Mostrar el modal al hacer clic */
 .modal:target {
     display: flex; /* Mostrar modal */
 }
 
 /* Contenido del modal */
 .modal-content {
-    background: #fff;
+    background: #fff; /* Marco blanco */
     padding: 20px;
-    border-radius: 10px;
-    max-width: 80%;
-    max-height: 80%;
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 90%; /* Asegura espacio para el marco */
+    max-height: 90%; /* Asegura espacio para el marco */
+    text-align: center;
+    box-sizing: border-box; /* Incluye el padding en las dimensiones */
+    overflow: hidden; /* Oculta contenido adicional si es necesario */
 }
 
-/* Imagen dentro del modal */
+/* Ajuste de las imágenes dentro del modal */
 .modal-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    display: block; /* Centra la imagen dentro del modal */
+    margin: 0 auto; /* Asegura el centrado horizontal */
+    width: auto; /* Ajusta el ancho automáticamente */
+    height: auto; /* Ajusta la altura automáticamente */
+    max-width: 100%; /* Escala proporcionalmente dentro del ancho máximo */
+    max-height: calc(100vh - 40px); /* Escala dentro del alto máximo menos padding */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Ajuste del destino para evitar desplazamiento */
+#dummy {
+    display: none; /* Oculta el contenedor vacío */
 }
 
 /* Botón de cierre */
@@ -136,21 +124,41 @@ a:hover {
 }
 
 
+/* Ajuste del destino para evitar desplazamiento */
+#dummy {
+    display: none; /* Oculta el contenedor vacío */
+}
+
+/* Botón de cierre */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+
 footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
     padding: 10px;
     background-color: #333;
     color: #fff;
-    text-align: center;
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
-/*  pantallas pequeñas */
+
+/* Pantallas pequeñas */
 @media (max-width: 768px) {
     #titulo-principal {
         font-size: 2em;
-        /* Reduce el tamaño del título */
         padding: 10px;
     }
 
